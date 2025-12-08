@@ -1,11 +1,11 @@
 USE calorie_app;
 
--- Default user to attach foods to
-INSERT INTO users (username)
-VALUES ('default_user')
+-- Required login credentials (even if you don’t use login in your app)
+INSERT INTO users (username, password)
+VALUES ('gold', 'smiths')
 ON DUPLICATE KEY UPDATE username = username;
 
--- Sample food entries for the default user
+-- Sample foods for user_id = 1
 INSERT INTO foods (user_id, food_name, calories)
 VALUES
 (1, 'Apple (medium)', 95),
