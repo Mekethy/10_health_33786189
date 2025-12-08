@@ -1,10 +1,10 @@
+require('dotenv').config({override: true});
 const express = require('express');
 const path = require('path');
-const dotenv = require('dotenv');
 const axios = require('axios');
 const db = require('./db');
 
-dotenv.config();
+
 
 const app = express();
 const PORT = process.env.PORT || 8000;
